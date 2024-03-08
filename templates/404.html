@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head> 
+   	<meta charset="utf-8">
+   	<title>Не существует</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/1303/PNG/512/checkform_85890.png">
+</head>
+<body>
+{% extends 'main.html' %}
+{% block paste %}
+<div class="container d-flex flex-wrap justify-content-center">
+<h2>Такой страницы не существует!</h2><br><br>
+<button class="btn btn-primary" type="button">
+    <a href="/" style="color: white; text-decoration: none;">
+        Перейти на основую страницу
+    </a>
+</button>
+</div>
+{% endblock %}
+</body>
+</html>

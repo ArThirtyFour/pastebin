@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head> 
+   	<meta charset="utf-8">
+   	<title>{{title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/1303/PNG/512/checkform_85890.png">
+</head>
+<body>
+{% extends 'main.html' %}
+{% block paste%}
+<h1 class="h3">Название - {{title}}</h1>
+<h1 class="h3">Автор - {{author}}</h1>
+<h1 class="h3">Выложено - {{time}}</h1><hr>
+<div class="da">
+    {% for i in text%}
+    <p class="display-4">{{i}}</p>
+    <br>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
