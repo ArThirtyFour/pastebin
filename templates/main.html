@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html >
-   <head> 
-   	<meta charset="utf-8">
-   	<title>Основаная страница</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/1303/PNG/512/checkform_85890.png">
-    </head>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pastebin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 <body>
-
-
-<nav class="py-2 bg-body-tertiary border-bottom">
-  <div class="container d-flex flex-wrap justify-content-center">
-    <ul class="nav me-auto">
-      <li class="nav-item"><a class="nav-link link-body-emphasis px-2">{{nick_name}}</a></li>
-      <li class="nav-item"><a href="/" class="nav-link link-body-emphasis px-2 active" aria-current="page">Основаная страница</a></li>
-      <li class="nav-item"><a href="/add_paste" class="nav-link link-body-emphasis px-2">Добавление пасты</a></li>
-      <li class="nav-item"><a href="/logout" class="nav-link link-body-emphasis px-2">Выйти с аккаунта</a></li>
-    </ul>
-  </div>
-</nav>
-{% block paste %}
-{% endblock %}  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Pastebin</a>
+            <div class="navbar-nav">
+                {% if nick_name %}
+                <a class="nav-link" href="/add_paste">Добавить paste</a>
+                <a class="nav-link" href="/logout">Выход ({{ nick_name }})</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% block paste %}{% endblock %}
+    </div>
 </body>
 </html>
