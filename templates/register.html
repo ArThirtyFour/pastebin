@@ -10,8 +10,11 @@
                         <div class="alert alert-danger">Логин должен быть не менее 5 символов, пароль - не менее 8</div>
                     {% elif error == 2 %}
                         <div class="alert alert-danger">Такой пользователь уже существует</div>
+                    {% elif error == 3 %}
+                        <div class="alert alert-danger">Укажите логин и пароль</div>
                     {% endif %}
                     <form method="post">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                         <div class="mb-3">
                             <input type="text" name="login" class="form-control" placeholder="Логин" required>
                         </div>

@@ -10,8 +10,11 @@
                         <div class="alert alert-danger">Пользователь не найден</div>
                     {% elif error == 2 %}
                         <div class="alert alert-danger">Неверный пароль</div>
+                    {% elif error == 3 %}
+                        <div class="alert alert-danger">Укажите логин и пароль</div>
                     {% endif %}
                     <form method="post">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                         <div class="mb-3">
                             <input type="text" name="login" class="form-control" placeholder="Логин" required>
                         </div>
