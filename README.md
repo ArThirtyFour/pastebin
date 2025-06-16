@@ -1,4 +1,4 @@
-### Website for posting pastes.
+## Website for posting pastes.
  > Written in Flask + SQLite3.  
  > For the frontend I used bootstrap.
 
